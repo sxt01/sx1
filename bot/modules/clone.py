@@ -85,9 +85,9 @@ def cloneNode(update, context):
             cc = f'\n\n<b>cc: </b>{uname}'
             men = f'{uname} '
         if button in ["cancelled", ""]:
-            sendMessage(men + result, context.bot, update)
+            sendMessage(result, context.bot, update)
         else:
-            sendMarkup(result + cc, context.bot, update, button)
+            sendMessage(result, context.bot, update)
         if gdtot_link:
             gd.deletefile(link)
     else:
