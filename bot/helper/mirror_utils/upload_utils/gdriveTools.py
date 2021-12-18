@@ -395,7 +395,7 @@ class GoogleDriveHelper:
                 msg += f'\n\n<b>Size: </b>{get_readable_file_size(int(meta.get("size", 0)))}'
                 msg += f'\n\n<b>Type: </b>{mime_type}'
                 if INDEX_URL is not None:
-                    url = requests.utils.requote_uri(f'{INDEX_URL}/{file.get("name")}')
+                        url = requests.utils.requote_uri(f'{INDEX_URL}/{file.get("name")}')
                         msg += f' | <a href="{url}"> Index URL</a>'
             if BUTTON_FOUR_NAME is not None and BUTTON_FOUR_URL is not None:
                 buttons.buildbutton(f"{BUTTON_FOUR_NAME}", f"{BUTTON_FOUR_URL}")
@@ -730,7 +730,7 @@ class GoogleDriveHelper:
         for content in self.telegraph_content:
             self.path.append(
                 telegraph.create_page(
-                    title='hoiMgiauten Search',
+                    title='Mirror-Leech-Bot Drive Search',
                     content=content
                 )["path"]
             )
